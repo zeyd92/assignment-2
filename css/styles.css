@@ -1,1 +1,174 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+} 
+html,body {
+  scroll-behavior: smooth;
+}
+body { 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  background: linear-gradient(135deg, #1e3a8a, #312e81); 
+  color: #f1f5f9; 
+} 
 
+  /* Navigation bar */ 
+  
+  nav { 
+    display:flex; 
+    justify-content: space-evenly;
+    gap: 20px; 
+    background: #0f172a; 
+    padding: 15px; 
+  } 
+  nav a { 
+    color: #f1f5f9; 
+    text-decoration: none; 
+    font-weight: bold; 
+  } 
+  nav a:hover { 
+    color: #60a5fa; /* When passing over*/ 
+  }
+
+     /* Sections */ 
+     section { 
+      padding: 60px 20px; 
+      text-align: center; 
+      margin: 20px;
+      border-radius: 10px;
+    } 
+    /* About section */ 
+    #about { 
+      background: rgba(30,64,175,0.85); 
+      margin: 20px; 
+      border-radius: 10px; 
+      padding: 30px; 
+    } 
+
+      /* Projects section */ 
+      #projects { 
+        background: rgba(49,46,129,0.85);  
+        margin: 20px; 
+        border-radius: 10px; 
+        padding: 30px; 
+      } 
+      .project { 
+        display: flex; 
+        align-items: flex-start;
+        gap: 30px;
+        margin: 40px 0; 
+      } 
+      .project-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .project-left h3 {
+        margin-bottom: 15px;
+      }
+
+      .project-left img {
+        max-width: 250px;
+        border-radius: 10px;
+      }
+
+      .project-right {
+        flex: 2;
+        text-align: left;
+      }
+      
+      
+      /* Contact section */ 
+      #contact { 
+        background: rgba(15,23,42,0.85); 
+        margin: 20px; 
+        border-radius: 10px; 
+        padding: 30px; 
+      } 
+      button { 
+        background: #3b82f6; 
+        color: f1f5f9; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background 0.3s ease;
+      } 
+      button:hover { 
+        background: #1e40af; 
+      } 
+      
+      .contact-float { 
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px; 
+        display: flex; 
+        flex-direction: column-reverse; 
+        align-items: flex-end; 
+        z-index: 1000; 
+      } 
+      /* Contact flotting Button*/ 
+      #contact-btn { 
+        background: #3b82f6; 
+        color: #fff; 
+        border: none; 
+        border-radius: 50%; 
+        width: 50px; 
+        height: 50px; 
+        font-size: 24px; 
+        cursor: pointer; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+        transition: background 0.3s ease; 
+      } 
+      #contact-btn:hover { 
+        background: #1e40af; 
+      } 
+       
+      #contact-card { 
+        background: #f1f5f9; 
+        color: #0f172a; 
+        padding: 15px 16px; 
+        border-radius: 10px; 
+        margin-bottom: 10px; 
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2); 
+        width: 240px; 
+        text-align: left; 
+
+        /*When closed*/ 
+        transform: translateY(12px);  
+        opacity: 0; 
+        pointer-events: none; 
+        transition: transform 0.6s ease, opacity 0.6s ease; 
+        will-change: transform, opacity;
+      } 
+      /*When open*/ 
+      #contact-card.show { 
+        transform: translateY(0); 
+        opacity: 1; 
+        pointer-events: auto; 
+      } 
+      #contact-card::after { 
+        content: ""; 
+        position: absolute; 
+        right: 28px; 
+        bottom: -8px; 
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent; 
+        border-right: 8px solid transparent; 
+        border-top: 8px solid #f1f5f9; 
+        filter: drop-shadow(0 -1px 1px rgba(0,0,0,0.08)); 
+      }
+      @media (prefers-reduced-motion: reduce) { 
+        #contact-card { transition: none; } 
+      }
+
+      /* For Flex/Grid */ 
+      @media (min-width: 768px) { 
+        .project { 
+          grid-template-columns: 1fr 1fr; 
+        } 
+      }
