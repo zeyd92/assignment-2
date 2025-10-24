@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+     <title>Assignment 1 - zayad portfolio</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+  </head>
+  <body> 
+    <!-- To Navigate --> 
+     <nav> 
+      <a href="#about">About</a> 
+      <a href="#projects">Projects</a> 
+      <a href="#contact">Contact</a> 
+    </nav> 
+    <!-- About Section --> 
+     <section id="about"> 
+      <h2>About Me</h2> 
+      <p>Hi, my name is Zayad Alghamdi. I am a Computer Science student interested in web development.</p>
+      <p>“Always learning, always improving.”</p>  
+    </section> 
+    <!-- Projects Section --> 
+     <section id="projects"> 
+      <h2>Projects</h2><br>
+      <div class="project"> 
+        <div class="project-left">
+          <!-- Project 1 -->
+        <h3>Movie Tickets Reservation App</h3> 
+        <img src="assets/images/project1-Movies.png" alt="Project One - Movies"><br>
+        </div>
+        <div class="project-right">
+        <br><br><p>This project allow login as admin or user:<br><br>
+          - The user can navigate to choose a suitable movie and get message if sucsessfully booked, out of tickets or already booked.<br><br>
+          - The admin can add new movie(with movie title, time, description, number of available tickets and some other fetures), delete available movie or edit a movie.</p>
+      </div>
+      </div>
+      <div class="project"> 
+        <div class="project-left"> 
+          <!-- Project 2 -->
+        <h3>Courses Registration App</h3>
+        <img src="assets/images/project2-Courses.png" alt="Project Two - Courses"><br>
+        </div>
+        <div class="project-right"> 
+        <br><br><p>Allow student enrollments in various courses. It allows students to register for courses, view available
+courses, and drop courses they are enrolled in. The system also provides administrative
+features for adding or updating course details.</p> 
+        </div>
+      </div> 
+    </section> 
+    <!-- Contact Section --> 
+     <section id="contact"> 
+      <h2>Contact</h2> 
+      <form> 
+        <label>Name:</label><br> 
+        <input type="text" name="name"><br><br> 
 
+        <label>Email:</label><br> 
+        <input type="email" name="email"><br><br>
+
+        <label>Message:</label><br> 
+        <textarea name="message"></textarea><br><br> 
+        
+        <button type="submit">Send</button> 
+      </form> 
+    </section> 
+    <!-- Floating Contact Button --> 
+     <div class="contact-float"> 
+      <button id="contact-btn">💬</button> 
+      <div id="contact-card"> 
+        <p><strong>Email:</strong> zeyd123a@email.com</p> 
+        <p><strong>Phone:</strong> +966 53 880 0223</p> 
+      </div> 
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
