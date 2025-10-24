@@ -8,20 +8,34 @@
   </head>
   <body> 
     <!-- To Navigate --> 
-     <nav> 
+     <nav>
+      <div class="nav-links">
       <a href="#about">About</a> 
       <a href="#projects">Projects</a> 
       <a href="#contact">Contact</a> 
+      </div>
+      <div id="greeting-container" class="greeting-box">
+      <h2 id="greeting-message">Welcome!</h2>
+      <input type="text" id="name-input" placeholder="Enter your name">
+      <button id="save-name">Save</button>
+    </div>
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle theme">🌑</button>
     </nav> 
+
+    
     <!-- About Section --> 
      <section id="about"> 
       <h2>About Me</h2> 
-      <p>Hi, my name is Zayad Alghamdi. I am a Computer Science student interested in web development.</p>
+      <p>Hi, my name is Zeyad Alghamdi. I am a Computer Science student interested in web development.</p>
       <p>“Always learning, always improving.”</p>  
     </section> 
     <!-- Projects Section --> 
      <section id="projects"> 
       <h2>Projects</h2><br>
+      <div class="project-controls">
+        <input id="project-search" type="search" placeholder="Search for projects…" aria-label="Search projects">
+      </div>
+      <div id="projects-empty" class="empty" hidden>No projects found.</div>
       <div class="project"> 
         <div class="project-left">
           <!-- Project 1 -->
@@ -32,7 +46,16 @@
         <br><br><p>This project allow login as admin or user:<br><br>
           - The user can navigate to choose a suitable movie and get message if sucsessfully booked, out of tickets or already booked.<br><br>
           - The admin can add new movie(with movie title, time, description, number of available tickets and some other fetures), delete available movie or edit a movie.</p>
-      </div>
+
+          <button class="toggle-details">▼ More details</button>
+          <div class="details">
+            <ul>
+              <li>User feedback on booking states</li>
+              <li>Admin can manage movie list easily</li>
+              <li>Responsive layout for desktop and mobile</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="project"> 
         <div class="project-left"> 
@@ -43,9 +66,18 @@
         <div class="project-right"> 
         <br><br><p>Allow student enrollments in various courses. It allows students to register for courses, view available
 courses, and drop courses they are enrolled in. The system also provides administrative
-features for adding or updating course details.</p> 
+features for adding or updating course details.</p>
+        <button class="toggle-details">▼ More details</button>
+
+        <div class="details">
+          <ul>
+            <li>Admin can add/update courses</li>
+            <li>Students can enroll/drop easily</li>
+            <li>Validation for course capacity</li>
+          </ul>
         </div>
-      </div> 
+      </div>
+    </div> 
     </section> 
     <!-- Contact Section --> 
      <section id="contact"> 
